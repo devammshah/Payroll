@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Payroll</string>
+    <string name="login_title">Admin Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="add_employee">Add Employee</string>
+    <string name="view_employees">View Employees</string>
+    <string name="generate_payroll">Generate Payroll</string>
+    <string name="payroll_reports">Payroll Reports</string>
+    <string name="logout">Logout</string>
+    <string name="search_employee">Search employee by name</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="department">Department</string>
+    <string name="designation">Designation</string>
+    <string name="basic_salary">Basic Salary</string>
+    <string name="hra_percent">HRA %</string>
+    <string name="da_percent">DA %</string>
+    <string name="other_allowances">Other Allowances</string>
+    <string name="pf_percent">PF %</string>
+    <string name="tax_percent">Tax %</string>
+    <string name="bank_account">Bank Account Number</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="save_employee">Save Employee</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="select_employee">Select Employee (tap edit to select)</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="generate_and_share_payslip">Generate Payslip</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="no_data">No records found</string>
+</resources>

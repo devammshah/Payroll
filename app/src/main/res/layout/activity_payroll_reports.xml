@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <EditText android:id="@+id/etFilterMonth" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/month" android:inputType="number"/>
+    <EditText android:id="@+id/etFilterYear" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/year" android:inputType="number"/>
+    <EditText android:id="@+id/etFilterDept" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/department"/>
+    <Button android:id="@+id/btnApplyFilters" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/apply_filters"/>
+    <TextView android:id="@+id/tvSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingVertical="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPayrollReports"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

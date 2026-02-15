@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText android:id="@+id/etFullName" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/full_name"/>
+        <EditText android:id="@+id/etEmail" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/email"/>
+        <EditText android:id="@+id/etPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/phone_number"/>
+        <EditText android:id="@+id/etDepartment" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/department"/>
+        <EditText android:id="@+id/etDesignation" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/designation"/>
+        <EditText android:id="@+id/etBasicSalary" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/basic_salary" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/etHraPercent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/hra_percent" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/etDaPercent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/da_percent" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/etAllowances" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/other_allowances" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/etPfPercent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/pf_percent" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/etTaxPercent" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/tax_percent" android:inputType="numberDecimal"/>
+        <EditText android:id="@+id/etBankAccount" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/bank_account"/>
+        <EditText android:id="@+id/etIfsc" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/ifsc_code"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/save_employee" />
+    </LinearLayout>
+</ScrollView>
