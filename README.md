@@ -1,43 +1,68 @@
-# Employee Payroll & Salary Slip Generator (Android, Kotlin)
+# Premium Employee Payroll & Salary Slip Generator
 
-A production-style Android app using **Kotlin + MVVM + Room + Material 3 + ViewBinding + Hilt**.
+A full-stack fintech-style solution with:
+- **Mobile app**: React Native + TypeScript
+- **Backend API**: Node.js + Express + MongoDB
 
-## Features
-- Admin login with encrypted session storage
-- Employee CRUD with search
-- Automated salary calculation (gross, deductions, net)
-- Monthly payroll generation with duplicate prevention per employee/month/year
-- PDF payslip generation and sharing
-- Payroll reporting with filters (month, year, department) + payout summary
+## Highlights
+- Secure **JWT admin authentication**
+- Employee management (**CRUD**)
+- Automated salary engine with **HRA, DA, PF, Tax, Net Salary**
+- Monthly payroll generation with duplicate prevention (`employee + month + year` unique index)
+- Professional PDF payslip generation + share support
+- Blue/teal tech-vibe dashboard cards, animations, and dark mode-first styling
 
-## Project Structure
+---
+
+## Backend (`/backend`)
+### Features
+- Admin login from env credentials
+- Protected employee and payroll APIs
+- Mongoose models for employees + payrolls
+- Payroll generation endpoint with conflict handling for duplicates
+
+### Quick start
+```bash
+cd backend
+cp .env.example .env
+npm install
+npm run dev
 ```
-app/src/main/java/com/payroll/
-  data/
-    dao/
-    database/
-    entity/
-  repository/
-  viewmodel/
-  utils/
-  ui/
-    login/
-    dashboard/
-    employee/
-    payroll/
-  di/
+
+### API overview
+- `POST /api/auth/login`
+- `GET|POST /api/employees`
+- `PUT|DELETE /api/employees/:id`
+- `GET /api/payrolls`
+- `GET /api/payrolls/:id`
+- `POST /api/payrolls/generate`
+
+---
+
+## Mobile (`/mobile`)
+### Features
+- Admin auth flow with token persistence
+- Dashboard analytics cards
+- Employees and Payroll screens
+- PDF payslip generation + preview/download/share workflow support
+
+### Quick start
+```bash
+cd mobile
+npm install
+npm run android
 ```
 
-## Setup Instructions
-1. Open the project in **Android Studio Hedgehog+**.
-2. Let Gradle sync and install SDK 34 / build tools.
-3. Build and run on emulator/device (min SDK 24).
-4. Login using:
-   - Username: `admin`
-   - Password: `admin@123`
-5. Add employees, generate payroll, then share generated payslip PDFs.
+Set backend base URL in `src/api/client.ts` if running on physical device/emulator.
 
-## Notes
-- PDFs are saved in app-specific Documents directory.
-- Session uses `EncryptedSharedPreferences`.
-- Room enforces unique monthly payroll per employee via database index.
+---
+
+## Salary Formula
+- `HRA = basic * hraRate (default 20%)`
+- `DA = basic * daRate (default 10%)`
+- `Gross = basic + HRA + DA`
+- `PF = basic * pfRate (default 12%)`
+- `Tax = Gross * taxRate (default 10%)`
+- `Net Salary = Gross - (PF + Tax)`
+
+All calculations are rounded to 2 decimals.
